@@ -1,12 +1,12 @@
 import logging
 
 from telegram import Update
-from telegram.ext import Application, ChatMemberHandler, CommandHandler, ContextTypes, JobQueue
+from telegram.ext import Application, ChatMemberHandler, CommandHandler, ContextTypes
 
 BOT_TOKEN = "8706710887:AAHRSdBnHSw4dwZszaQjKS8J4i3WL9Ltmm4"
 
 LEAVE_MESSAGE = (
-    "A member left the channel. Leave this Channel and join us in Medify 👋"
+    "A member left the channel. Leave this Channel and join us in [**Medify**](https://t.me/addlist/-PAkHrQUyz40YzNk) 👋"
 )
 
 CHANNEL_ID = -1002227504339  # 🔴 Replace with your actual channel ID
@@ -21,7 +21,6 @@ member_counts: dict[int, int] = {}
 
 
 async def on_startup(app) -> None:
-    """Fetch and cache the member count as soon as the bot starts."""
     try:
         count = await app.bot.get_chat_member_count(CHANNEL_ID)
         member_counts[CHANNEL_ID] = count
@@ -53,7 +52,7 @@ async def handle_chat_member(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
     if previous_count is not None and current_count < previous_count:
         logger.info("Member count decreased in chat %s, sending message.", chat_id)
-        await context.bot.send_message(chat_id=chat_id, text=LEAVE_MESSAGE)
+        await context.bot.send_message(chat_id=chat_id, text=LEAVE_MESSAGE, parse_mode="Markdown")
 
     member_counts[chat_id] = current_count
 
