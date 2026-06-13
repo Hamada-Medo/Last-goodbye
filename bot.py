@@ -6,7 +6,7 @@ from telegram.ext import Application, ChatMemberHandler, CommandHandler, Context
 BOT_TOKEN = "8706710887:AAHRSdBnHSw4dwZszaQjKS8J4i3WL9Ltmm4"
 
 LEAVE_MESSAGE = (
-    "A member left the channel. Leave this Channel and join us in [**Medify**](https://t.me/addlist/-PAkHrQUyz40YzNk) 👋"
+    "جمدان وربنا"
 )
 
 CHANNEL_ID = -1002227504339  # 🔴 Replace with your actual channel ID
