@@ -6,7 +6,7 @@ from telegram.ext import Application, ChatMemberHandler, CommandHandler, Context
 BOT_TOKEN = "8706710887:AAHRSdBnHSw4dwZszaQjKS8J4i3WL9Ltmm4"
 
 LEAVE_MESSAGE = (
-    "جمدان وربنا"
+    "هعمل نفسي مش شايف"
 )
 
 CHANNEL_ID = -1002227504339  # 🔴 Replace with your actual channel ID
