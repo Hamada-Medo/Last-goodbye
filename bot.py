@@ -2,7 +2,7 @@ from datetime import timezone
 from telegram import Update
 from telegram.ext import Application, MessageHandler, ContextTypes, filters
 
-TOKEN = "8706710887:AAHRSdBnHSw4dwZszaQjKS8J4i3WL9Ltmm4"
+BOT_TOKEN = os.environ["BOT_TOKEN"]  # set this in Railway's Variables tab — never hardcode it
 MY_CHAT_ID = 940770584
 
 
